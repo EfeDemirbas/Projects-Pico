@@ -1,0 +1,3411 @@
+Determining if the environ exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_6f5f3/fast && gmake  -f CMakeFiles/cmTC_6f5f3.dir/build.make CMakeFiles/cmTC_6f5f3.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6f5f3.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -std=gnu11 -o CMakeFiles/cmTC_6f5f3.dir/CheckSymbolExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘environ’ undeclared (first use in this function)
+    8 |   return ((int*)(&environ))[argc];
+      |                   ^~~~~~~
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_6f5f3.dir/build.make:85: CMakeFiles/cmTC_6f5f3.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_6f5f3/fast] Error 2
+
+
+File /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef environ
+  return ((int*)(&environ))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Checking whether CXX compiler has environ in stdlib.h failed to compile with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/Source/kwsys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_a3dd4/fast && gmake  -f CMakeFiles/cmTC_a3dd4.dir/build.make CMakeFiles/cmTC_a3dd4.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/Source/kwsys/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a3dd4.dir/kwsysPlatformTestsCXX.cxx.o
+/usr/bin/g++ -DTEST_KWSYS_CXX_HAS_ENVIRON_IN_STDLIB_H  -std=gnu++17 -o CMakeFiles/cmTC_a3dd4.dir/kwsysPlatformTestsCXX.cxx.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Source/kwsys/kwsysPlatformTestsCXX.cxx
+/mnt/c/users/efede/pico/cmake-3.19.4/Source/kwsys/kwsysPlatformTestsCXX.cxx: In function ‘int main()’:
+/mnt/c/users/efede/pico/cmake-3.19.4/Source/kwsys/kwsysPlatformTestsCXX.cxx:53:13: error: ‘environ’ was not declared in this scope; did you mean ‘union’?
+   53 |   char* e = environ[0];
+      |             ^~~~~~~
+      |             union
+gmake[1]: *** [CMakeFiles/cmTC_a3dd4.dir/build.make:85: CMakeFiles/cmTC_a3dd4.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/Source/kwsys/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_a3dd4/fast] Error 2
+
+
+
+Checking whether CXX compiler struct stat has st_mtimespec member failed to compile with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/Source/kwsys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_8cc17/fast && gmake  -f CMakeFiles/cmTC_8cc17.dir/build.make CMakeFiles/cmTC_8cc17.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/Source/kwsys/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8cc17.dir/kwsysPlatformTestsCXX.cxx.o
+/usr/bin/g++ -DTEST_KWSYS_CXX_STAT_HAS_ST_MTIMESPEC  -std=gnu++17 -o CMakeFiles/cmTC_8cc17.dir/kwsysPlatformTestsCXX.cxx.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Source/kwsys/kwsysPlatformTestsCXX.cxx
+/mnt/c/users/efede/pico/cmake-3.19.4/Source/kwsys/kwsysPlatformTestsCXX.cxx: In function ‘int main()’:
+/mnt/c/users/efede/pico/cmake-3.19.4/Source/kwsys/kwsysPlatformTestsCXX.cxx:26:15: error: ‘struct stat’ has no member named ‘st_mtimespec’
+   26 |   (void)stat1.st_mtimespec.tv_sec;
+      |               ^~~~~~~~~~~~
+/mnt/c/users/efede/pico/cmake-3.19.4/Source/kwsys/kwsysPlatformTestsCXX.cxx:27:15: error: ‘struct stat’ has no member named ‘st_mtimespec’
+   27 |   (void)stat1.st_mtimespec.tv_nsec;
+      |               ^~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_8cc17.dir/build.make:85: CMakeFiles/cmTC_8cc17.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/Source/kwsys/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_8cc17/fast] Error 2
+
+
+
+Determining if the function connect exists in the socket;dl failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_c3f44/fast && gmake  -f CMakeFiles/cmTC_c3f44.dir/build.make CMakeFiles/cmTC_c3f44.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c3f44.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=connect -std=gnu11 -o CMakeFiles/cmTC_c3f44.dir/CheckFunctionExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c3f44
+/mnt/c/users/efede/pico/cmake-3.19.4/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_c3f44.dir/link.txt --verbose=1
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_c3f44.dir/CheckFunctionExists.c.o -o cmTC_c3f44  -lsocket -ldl 
+/usr/bin/ld: cannot find -lsocket: No such file or directory
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_c3f44.dir/build.make:106: cmTC_c3f44] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_c3f44/fast] Error 2
+
+
+
+Determining if the function recv exists in the network;dl failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_f7701/fast && gmake  -f CMakeFiles/cmTC_f7701.dir/build.make CMakeFiles/cmTC_f7701.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f7701.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=recv -std=gnu11 -o CMakeFiles/cmTC_f7701.dir/CheckFunctionExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f7701
+/mnt/c/users/efede/pico/cmake-3.19.4/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_f7701.dir/link.txt --verbose=1
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=recv CMakeFiles/cmTC_f7701.dir/CheckFunctionExists.c.o -o cmTC_f7701  -lnetwork -ldl 
+/usr/bin/ld: cannot find -lnetwork: No such file or directory
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_f7701.dir/build.make:106: cmTC_f7701] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_f7701/fast] Error 2
+
+
+
+Determining if the RAND_status exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_882e1/fast && gmake  -f CMakeFiles/cmTC_882e1.dir/build.make CMakeFiles/cmTC_882e1.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_882e1.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_882e1.dir/CheckSymbolExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:7:19: error: ‘RAND_status’ undeclared (first use in this function)
+    7 |   return ((int*)(&RAND_status))[argc];
+      |                   ^~~~~~~~~~~
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:7:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_882e1.dir/build.make:85: CMakeFiles/cmTC_882e1.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_882e1/fast] Error 2
+
+
+File /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef RAND_status
+  return ((int*)(&RAND_status))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the RAND_screen exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_92457/fast && gmake  -f CMakeFiles/cmTC_92457.dir/build.make CMakeFiles/cmTC_92457.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_92457.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_92457.dir/CheckSymbolExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:7:19: error: ‘RAND_screen’ undeclared (first use in this function)
+    7 |   return ((int*)(&RAND_screen))[argc];
+      |                   ^~~~~~~~~~~
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:7:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_92457.dir/build.make:85: CMakeFiles/cmTC_92457.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_92457/fast] Error 2
+
+
+File /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef RAND_screen
+  return ((int*)(&RAND_screen))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the RAND_egd exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_7b01b/fast && gmake  -f CMakeFiles/cmTC_7b01b.dir/build.make CMakeFiles/cmTC_7b01b.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7b01b.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_7b01b.dir/CheckSymbolExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:7:19: error: ‘RAND_egd’ undeclared (first use in this function)
+    7 |   return ((int*)(&RAND_egd))[argc];
+      |                   ^~~~~~~~
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:7:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_7b01b.dir/build.make:85: CMakeFiles/cmTC_7b01b.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_7b01b/fast] Error 2
+
+
+File /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef RAND_egd
+  return ((int*)(&RAND_egd))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function idn2_lookup_ul exists in the idn2;dl;/usr/lib/x86_64-linux-gnu/libssl.so;/usr/lib/x86_64-linux-gnu/libcrypto.so;cmnghttp2 failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_0eda9/fast && gmake  -f CMakeFiles/cmTC_0eda9.dir/build.make CMakeFiles/cmTC_0eda9.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0eda9.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=idn2_lookup_ul -std=gnu11 -o CMakeFiles/cmTC_0eda9.dir/CheckFunctionExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0eda9
+/mnt/c/users/efede/pico/cmake-3.19.4/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_0eda9.dir/link.txt --verbose=1
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=idn2_lookup_ul CMakeFiles/cmTC_0eda9.dir/CheckFunctionExists.c.o -o cmTC_0eda9  -lidn2 -ldl /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so -lcmnghttp2 
+/usr/bin/ld: cannot find -lidn2: No such file or directory
+/usr/bin/ld: cannot find -lcmnghttp2: No such file or directory
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_0eda9.dir/build.make:108: cmTC_0eda9] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_0eda9/fast] Error 2
+
+
+
+Determining if the function dlopen exists in the dl;/usr/lib/x86_64-linux-gnu/libssl.so;/usr/lib/x86_64-linux-gnu/libcrypto.so;cmnghttp2 failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_249dd/fast && gmake  -f CMakeFiles/cmTC_249dd.dir/build.make CMakeFiles/cmTC_249dd.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_249dd.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=dlopen -std=gnu11 -o CMakeFiles/cmTC_249dd.dir/CheckFunctionExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Modules/CheckFunctionExists.c
+Linking C executable cmTC_249dd
+/mnt/c/users/efede/pico/cmake-3.19.4/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_249dd.dir/link.txt --verbose=1
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=dlopen CMakeFiles/cmTC_249dd.dir/CheckFunctionExists.c.o -o cmTC_249dd  -ldl /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so -lcmnghttp2 
+/usr/bin/ld: cannot find -lcmnghttp2: No such file or directory
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_249dd.dir/build.make:108: cmTC_249dd] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_249dd/fast] Error 2
+
+
+
+Determining if files stdio.h;inttypes.h;sys/filio.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_5ad5c/fast && gmake  -f CMakeFiles/cmTC_5ad5c.dir/build.make CMakeFiles/cmTC_5ad5c.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5ad5c.dir/HAVE_SYS_FILIO_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_5ad5c.dir/HAVE_SYS_FILIO_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_SYS_FILIO_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_SYS_FILIO_H.c:4:10: fatal error: sys/filio.h: No such file or directory
+    4 | #include <sys/filio.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_5ad5c.dir/build.make:85: CMakeFiles/cmTC_5ad5c.dir/HAVE_SYS_FILIO_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_5ad5c/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/filio.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/sockio.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_2639c/fast && gmake  -f CMakeFiles/cmTC_2639c.dir/build.make CMakeFiles/cmTC_2639c.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2639c.dir/HAVE_SYS_SOCKIO_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_2639c.dir/HAVE_SYS_SOCKIO_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_SYS_SOCKIO_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_SYS_SOCKIO_H.c:10:10: fatal error: sys/sockio.h: No such file or directory
+   10 | #include <sys/sockio.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_2639c.dir/build.make:85: CMakeFiles/cmTC_2639c.dir/HAVE_SYS_SOCKIO_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_2639c/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/sockio.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/utime.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_876f6/fast && gmake  -f CMakeFiles/cmTC_876f6.dir/build.make CMakeFiles/cmTC_876f6.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_876f6.dir/HAVE_SYS_UTIME_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_876f6.dir/HAVE_SYS_UTIME_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_SYS_UTIME_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_SYS_UTIME_H.c:15:10: fatal error: sys/utime.h: No such file or directory
+   15 | #include <sys/utime.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_876f6.dir/build.make:85: CMakeFiles/cmTC_876f6.dir/HAVE_SYS_UTIME_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_876f6/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/utime.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/xattr.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;crypto.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_0702f/fast && gmake  -f CMakeFiles/cmTC_0702f.dir/build.make CMakeFiles/cmTC_0702f.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0702f.dir/HAVE_CRYPTO_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_0702f.dir/HAVE_CRYPTO_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_CRYPTO_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_CRYPTO_H.c:20:10: fatal error: crypto.h: No such file or directory
+   20 | #include <crypto.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_0702f.dir/build.make:85: CMakeFiles/cmTC_0702f.dir/HAVE_CRYPTO_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_0702f/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <crypto.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/xattr.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;idn2.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_824d8/fast && gmake  -f CMakeFiles/cmTC_824d8.dir/build.make CMakeFiles/cmTC_824d8.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_824d8.dir/HAVE_IDN2_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_824d8.dir/HAVE_IDN2_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_IDN2_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_IDN2_H.c:23:10: fatal error: idn2.h: No such file or directory
+   23 | #include <idn2.h>
+      |          ^~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_824d8.dir/build.make:85: CMakeFiles/cmTC_824d8.dir/HAVE_IDN2_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_824d8/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn2.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/xattr.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;ifaddrs.h;io.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_4bb7b/fast && gmake  -f CMakeFiles/cmTC_4bb7b.dir/build.make CMakeFiles/cmTC_4bb7b.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4bb7b.dir/HAVE_IO_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_4bb7b.dir/HAVE_IO_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_IO_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_IO_H.c:24:10: fatal error: io.h: No such file or directory
+   24 | #include <io.h>
+      |          ^~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_4bb7b.dir/build.make:85: CMakeFiles/cmTC_4bb7b.dir/HAVE_IO_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_4bb7b/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <io.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/xattr.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;ifaddrs.h;krb.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_90cda/fast && gmake  -f CMakeFiles/cmTC_90cda.dir/build.make CMakeFiles/cmTC_90cda.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_90cda.dir/HAVE_KRB_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_90cda.dir/HAVE_KRB_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_KRB_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_KRB_H.c:24:10: fatal error: krb.h: No such file or directory
+   24 | #include <krb.h>
+      |          ^~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_90cda.dir/build.make:85: CMakeFiles/cmTC_90cda.dir/HAVE_KRB_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_90cda/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <krb.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/xattr.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;ifaddrs.h;libgen.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;pem.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_1114b/fast && gmake  -f CMakeFiles/cmTC_1114b.dir/build.make CMakeFiles/cmTC_1114b.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1114b.dir/HAVE_PEM_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_1114b.dir/HAVE_PEM_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_PEM_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_PEM_H.c:30:10: fatal error: pem.h: No such file or directory
+   30 | #include <pem.h>
+      |          ^~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_1114b.dir/build.make:85: CMakeFiles/cmTC_1114b.dir/HAVE_PEM_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_1114b/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <pem.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/xattr.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;ifaddrs.h;libgen.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;poll.h;pwd.h;rsa.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_0c7bb/fast && gmake  -f CMakeFiles/cmTC_0c7bb.dir/build.make CMakeFiles/cmTC_0c7bb.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0c7bb.dir/HAVE_RSA_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_0c7bb.dir/HAVE_RSA_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_RSA_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_RSA_H.c:32:10: fatal error: rsa.h: No such file or directory
+   32 | #include <rsa.h>
+      |          ^~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_0c7bb.dir/build.make:85: CMakeFiles/cmTC_0c7bb.dir/HAVE_RSA_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_0c7bb/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <rsa.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/xattr.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;ifaddrs.h;libgen.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;poll.h;pwd.h;setjmp.h;sgtty.h;signal.h;ssl.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_55ce3/fast && gmake  -f CMakeFiles/cmTC_55ce3.dir/build.make CMakeFiles/cmTC_55ce3.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_55ce3.dir/HAVE_SSL_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_55ce3.dir/HAVE_SSL_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_SSL_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_SSL_H.c:35:10: fatal error: ssl.h: No such file or directory
+   35 | #include <ssl.h>
+      |          ^~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_55ce3.dir/build.make:85: CMakeFiles/cmTC_55ce3.dir/HAVE_SSL_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_55ce3/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <ssl.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/xattr.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;ifaddrs.h;libgen.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;poll.h;pwd.h;setjmp.h;sgtty.h;signal.h;stdbool.h;stdint.h;stdio.h;stdlib.h;string.h;strings.h;stropts.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_f0027/fast && gmake  -f CMakeFiles/cmTC_f0027.dir/build.make CMakeFiles/cmTC_f0027.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f0027.dir/HAVE_STROPTS_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_f0027.dir/HAVE_STROPTS_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_STROPTS_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_STROPTS_H.c:41:10: fatal error: stropts.h: No such file or directory
+   41 | #include <stropts.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_f0027.dir/build.make:85: CMakeFiles/cmTC_f0027.dir/HAVE_STROPTS_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_f0027/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <stropts.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/xattr.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;ifaddrs.h;libgen.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;poll.h;pwd.h;setjmp.h;sgtty.h;signal.h;stdbool.h;stdint.h;stdio.h;stdlib.h;string.h;strings.h;termio.h;termios.h;time.h;unistd.h;utime.h;x509.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_d0d04/fast && gmake  -f CMakeFiles/cmTC_d0d04.dir/build.make CMakeFiles/cmTC_d0d04.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d0d04.dir/HAVE_X509_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_d0d04.dir/HAVE_X509_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_X509_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_X509_H.c:46:10: fatal error: x509.h: No such file or directory
+   46 | #include <x509.h>
+      |          ^~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_d0d04.dir/build.make:85: CMakeFiles/cmTC_d0d04.dir/HAVE_X509_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_d0d04/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <x509.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/xattr.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;ifaddrs.h;libgen.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;poll.h;pwd.h;setjmp.h;sgtty.h;signal.h;stdbool.h;stdint.h;stdio.h;stdlib.h;string.h;strings.h;termio.h;termios.h;time.h;unistd.h;utime.h;process.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_96de5/fast && gmake  -f CMakeFiles/cmTC_96de5.dir/build.make CMakeFiles/cmTC_96de5.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_96de5.dir/HAVE_PROCESS_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_96de5.dir/HAVE_PROCESS_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_PROCESS_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_PROCESS_H.c:46:10: fatal error: process.h: No such file or directory
+   46 | #include <process.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_96de5.dir/build.make:85: CMakeFiles/cmTC_96de5.dir/HAVE_PROCESS_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_96de5/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <process.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/xattr.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;ifaddrs.h;libgen.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;poll.h;pwd.h;setjmp.h;sgtty.h;signal.h;stdbool.h;stdint.h;stdio.h;stdlib.h;string.h;strings.h;termio.h;termios.h;time.h;unistd.h;utime.h;stddef.h;dlfcn.h;malloc.h;memory.h;netinet/if_ether.h;stdint.h;sockio.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_78ae7/fast && gmake  -f CMakeFiles/cmTC_78ae7.dir/build.make CMakeFiles/cmTC_78ae7.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_78ae7.dir/HAVE_SOCKIO_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_78ae7.dir/HAVE_SOCKIO_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_SOCKIO_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_SOCKIO_H.c:52:10: fatal error: sockio.h: No such file or directory
+   52 | #include <sockio.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_78ae7.dir/build.make:85: CMakeFiles/cmTC_78ae7.dir/HAVE_SOCKIO_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_78ae7/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sockio.h>
+
+
+int main(void){return 0;}
+
+Determining if the stricmp exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_f870b/fast && gmake  -f CMakeFiles/cmTC_f870b.dir/build.make CMakeFiles/cmTC_f870b.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f870b.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_f870b.dir/CheckSymbolExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: error: ‘stricmp’ undeclared (first use in this function); did you mean ‘strncmp’?
+   58 |   return ((int*)(&stricmp))[argc];
+      |                   ^~~~~~~
+      |                   strncmp
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_f870b.dir/build.make:85: CMakeFiles/cmTC_f870b.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_f870b/fast] Error 2
+
+
+File /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef stricmp
+  return ((int*)(&stricmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strcmpi exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_ab87c/fast && gmake  -f CMakeFiles/cmTC_ab87c.dir/build.make CMakeFiles/cmTC_ab87c.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ab87c.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_ab87c.dir/CheckSymbolExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: error: ‘strcmpi’ undeclared (first use in this function); did you mean ‘strcmp’?
+   58 |   return ((int*)(&strcmpi))[argc];
+      |                   ^~~~~~~
+      |                   strcmp
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_ab87c.dir/build.make:85: CMakeFiles/cmTC_ab87c.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_ab87c/fast] Error 2
+
+
+File /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strcmpi
+  return ((int*)(&strcmpi))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strncmpi exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_99cee/fast && gmake  -f CMakeFiles/cmTC_99cee.dir/build.make CMakeFiles/cmTC_99cee.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_99cee.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_99cee.dir/CheckSymbolExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: error: ‘strncmpi’ undeclared (first use in this function); did you mean ‘strncmp’?
+   58 |   return ((int*)(&strncmpi))[argc];
+      |                   ^~~~~~~~
+      |                   strncmp
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_99cee.dir/build.make:85: CMakeFiles/cmTC_99cee.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_99cee/fast] Error 2
+
+
+File /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strncmpi
+  return ((int*)(&strncmpi))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the inet_ntoa_r exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_f07ed/fast && gmake  -f CMakeFiles/cmTC_f07ed.dir/build.make CMakeFiles/cmTC_f07ed.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f07ed.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_f07ed.dir/CheckSymbolExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: error: ‘inet_ntoa_r’ undeclared (first use in this function); did you mean ‘inet_ntoa’?
+   58 |   return ((int*)(&inet_ntoa_r))[argc];
+      |                   ^~~~~~~~~~~
+      |                   inet_ntoa
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_f07ed.dir/build.make:85: CMakeFiles/cmTC_f07ed.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_f07ed/fast] Error 2
+
+
+File /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef inet_ntoa_r
+  return ((int*)(&inet_ntoa_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the closesocket exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_88d0c/fast && gmake  -f CMakeFiles/cmTC_88d0c.dir/build.make CMakeFiles/cmTC_88d0c.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_88d0c.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_88d0c.dir/CheckSymbolExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: error: ‘closesocket’ undeclared (first use in this function)
+   58 |   return ((int*)(&closesocket))[argc];
+      |                   ^~~~~~~~~~~
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_88d0c.dir/build.make:85: CMakeFiles/cmTC_88d0c.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_88d0c/fast] Error 2
+
+
+File /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef closesocket
+  return ((int*)(&closesocket))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the getpass_r exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_d260e/fast && gmake  -f CMakeFiles/cmTC_d260e.dir/build.make CMakeFiles/cmTC_d260e.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d260e.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_d260e.dir/CheckSymbolExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: error: ‘getpass_r’ undeclared (first use in this function); did you mean ‘getpass’?
+   58 |   return ((int*)(&getpass_r))[argc];
+      |                   ^~~~~~~~~
+      |                   getpass
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_d260e.dir/build.make:85: CMakeFiles/cmTC_d260e.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_d260e/fast] Error 2
+
+
+File /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getpass_r
+  return ((int*)(&getpass_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strlcat exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_32684/fast && gmake  -f CMakeFiles/cmTC_32684.dir/build.make CMakeFiles/cmTC_32684.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_32684.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_32684.dir/CheckSymbolExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: error: ‘strlcat’ undeclared (first use in this function); did you mean ‘strncat’?
+   58 |   return ((int*)(&strlcat))[argc];
+      |                   ^~~~~~~
+      |                   strncat
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_32684.dir/build.make:85: CMakeFiles/cmTC_32684.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_32684/fast] Error 2
+
+
+File /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strlcat
+  return ((int*)(&strlcat))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _strtoi64 exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_597b0/fast && gmake  -f CMakeFiles/cmTC_597b0.dir/build.make CMakeFiles/cmTC_597b0.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_597b0.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_597b0.dir/CheckSymbolExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: error: ‘_strtoi64’ undeclared (first use in this function)
+   58 |   return ((int*)(&_strtoi64))[argc];
+      |                   ^~~~~~~~~
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_597b0.dir/build.make:85: CMakeFiles/cmTC_597b0.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_597b0/fast] Error 2
+
+
+File /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _strtoi64
+  return ((int*)(&_strtoi64))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the setmode exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_76b2f/fast && gmake  -f CMakeFiles/cmTC_76b2f.dir/build.make CMakeFiles/cmTC_76b2f.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_76b2f.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_76b2f.dir/CheckSymbolExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: error: ‘setmode’ undeclared (first use in this function)
+   58 |   return ((int*)(&setmode))[argc];
+      |                   ^~~~~~~
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:58:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_76b2f.dir/build.make:85: CMakeFiles/cmTC_76b2f.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_76b2f/fast] Error 2
+
+
+File /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/xattr.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef setmode
+  return ((int*)(&setmode))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function mach_absolute_time exists failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_74cce/fast && gmake  -f CMakeFiles/cmTC_74cce.dir/build.make CMakeFiles/cmTC_74cce.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_74cce.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=mach_absolute_time -std=gnu11 -o CMakeFiles/cmTC_74cce.dir/CheckFunctionExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Modules/CheckFunctionExists.c
+Linking C executable cmTC_74cce
+/mnt/c/users/efede/pico/cmake-3.19.4/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_74cce.dir/link.txt --verbose=1
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=mach_absolute_time CMakeFiles/cmTC_74cce.dir/CheckFunctionExists.c.o -o cmTC_74cce 
+/usr/bin/ld: CMakeFiles/cmTC_74cce.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `mach_absolute_time'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_74cce.dir/build.make:106: cmTC_74cce] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_74cce/fast] Error 2
+
+
+
+Performing Curl Test HAVE_FSETXATTR_6 failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_c36fc/fast && gmake  -f CMakeFiles/cmTC_c36fc.dir/build.make CMakeFiles/cmTC_c36fc.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c36fc.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_FSETXATTR_6  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_c36fc.dir/CurlTests.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:544:3: error: too many arguments to function ‘fsetxattr’
+  544 |   fsetxattr(0, 0, 0, 0, 0, 0);
+      |   ^~~~~~~~~
+In file included from /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:541:
+/usr/include/x86_64-linux-gnu/sys/xattr.h:54:12: note: declared here
+   54 | extern int fsetxattr (int __fd, const char *__name, const void *__value,
+      |            ^~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_c36fc.dir/build.make:85: CMakeFiles/cmTC_c36fc.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_c36fc/fast] Error 2
+
+
+Performing Curl Test HAVE_IOCTLSOCKET failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_f3756/fast && gmake  -f CMakeFiles/cmTC_f3756.dir/build.make CMakeFiles/cmTC_f3756.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f3756.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_IOCTLSOCKET  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_f3756.dir/CurlTests.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:326:44: error: ‘FIONBIO’ undeclared (first use in this function)
+  326 |  unsigned long flags = ioctlsocket(socket, FIONBIO, &flags);
+      |                                            ^~~~~~~
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:326:44: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_f3756.dir/build.make:85: CMakeFiles/cmTC_f3756.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_f3756/fast] Error 2
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_CAMEL failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_c145a/fast && gmake  -f CMakeFiles/cmTC_c145a.dir/build.make CMakeFiles/cmTC_c145a.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c145a.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_IOCTLSOCKET_CAMEL  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_c145a.dir/CurlTests.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c
+Linking C executable cmTC_c145a
+/mnt/c/users/efede/pico/cmake-3.19.4/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_c145a.dir/link.txt --verbose=1
+/usr/bin/gcc   -w -DHAVE_IOCTLSOCKET_CAMEL  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H CMakeFiles/cmTC_c145a.dir/CurlTests.c.o -o cmTC_c145a 
+/usr/bin/ld: CMakeFiles/cmTC_c145a.dir/CurlTests.c.o: in function `main':
+CurlTests.c:(.text+0x1d): undefined reference to `IoctlSocket'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_c145a.dir/build.make:106: cmTC_c145a] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_c145a/fast] Error 2
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_CAMEL_FIONBIO failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_5e184/fast && gmake  -f CMakeFiles/cmTC_5e184.dir/build.make CMakeFiles/cmTC_5e184.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5e184.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_IOCTLSOCKET_CAMEL_FIONBIO  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_5e184.dir/CurlTests.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:382:32: error: ‘FIONBIO’ undeclared (first use in this function)
+  382 |         if(0 != ioctlsocket(0, FIONBIO, &flags))
+      |                                ^~~~~~~
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:382:32: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_5e184.dir/build.make:85: CMakeFiles/cmTC_5e184.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_5e184/fast] Error 2
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_FIONBIO failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_c4e87/fast && gmake  -f CMakeFiles/cmTC_c4e87.dir/build.make CMakeFiles/cmTC_c4e87.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c4e87.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_IOCTLSOCKET_FIONBIO  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_c4e87.dir/CurlTests.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:409:32: error: ‘FIONBIO’ undeclared (first use in this function)
+  409 |         if(0 != ioctlsocket(0, FIONBIO, &flags))
+      |                                ^~~~~~~
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:409:32: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_c4e87.dir/build.make:85: CMakeFiles/cmTC_c4e87.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_c4e87/fast] Error 2
+
+
+Performing Curl Test HAVE_SETSOCKOPT_SO_NONBLOCK failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_9632e/fast && gmake  -f CMakeFiles/cmTC_9632e.dir/build.make CMakeFiles/cmTC_9632e.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9632e.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_SETSOCKOPT_SO_NONBLOCK  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_9632e.dir/CurlTests.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:505:43: error: ‘SO_NONBLOCK’ undeclared (first use in this function); did you mean ‘SOCK_NONBLOCK’?
+  505 |         if(0 != setsockopt(0, SOL_SOCKET, SO_NONBLOCK, 0, 0))
+      |                                           ^~~~~~~~~~~
+      |                                           SOCK_NONBLOCK
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:505:43: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_9632e.dir/build.make:85: CMakeFiles/cmTC_9632e.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_9632e/fast] Error 2
+
+
+Performing Curl Test HAVE_O_NONBLOCK failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_5a73e/fast && gmake  -f CMakeFiles/cmTC_5a73e.dir/build.make CMakeFiles/cmTC_5a73e.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5a73e.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_O_NONBLOCK  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_5a73e.dir/CurlTests.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c
+Linking C executable cmTC_5a73e
+/mnt/c/users/efede/pico/cmake-3.19.4/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_5a73e.dir/link.txt --verbose=1
+/usr/bin/gcc   -w -DHAVE_O_NONBLOCK  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H CMakeFiles/cmTC_5a73e.dir/CurlTests.c.o -o cmTC_5a73e 
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x1b): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_5a73e.dir/build.make:106: cmTC_5a73e] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_5a73e/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYADDR_R_5 failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_9a2d5/fast && gmake  -f CMakeFiles/cmTC_9a2d5.dir/build.make CMakeFiles/cmTC_9a2d5.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9a2d5.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_GETHOSTBYADDR_R_5  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_9a2d5.dir/CurlTests.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:106:23: error: storage size of ‘hdata’ isn’t known
+  106 |   struct hostent_data hdata;
+      |                       ^~~~~
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:127:8: error: too few arguments to function ‘gethostbyaddr_r’
+  127 |   rc = gethostbyaddr_r(address, length, type, &h, &hdata);
+      |        ^~~~~~~~~~~~~~~
+In file included from /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:93:
+/usr/include/netdb.h:170:12: note: declared here
+  170 | extern int gethostbyaddr_r (const void *__restrict __addr, __socklen_t __len,
+      |            ^~~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_9a2d5.dir/build.make:85: CMakeFiles/cmTC_9a2d5.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_9a2d5/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYADDR_R_7 failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_cfa36/fast && gmake  -f CMakeFiles/cmTC_cfa36.dir/build.make CMakeFiles/cmTC_cfa36.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cfa36.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_GETHOSTBYADDR_R_7  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_cfa36.dir/CurlTests.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:131:8: error: too few arguments to function ‘gethostbyaddr_r’
+  131 |   hp = gethostbyaddr_r(address, length, type, &h, buffer, 8192, &h_errnop);
+      |        ^~~~~~~~~~~~~~~
+In file included from /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:93:
+/usr/include/netdb.h:170:12: note: declared here
+  170 | extern int gethostbyaddr_r (const void *__restrict __addr, __socklen_t __len,
+      |            ^~~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_cfa36.dir/build.make:85: CMakeFiles/cmTC_cfa36.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_cfa36/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYADDR_R_5_REENTRANT failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_09cf2/fast && gmake  -f CMakeFiles/cmTC_09cf2.dir/build.make CMakeFiles/cmTC_09cf2.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_09cf2.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_GETHOSTBYADDR_R_5_REENTRANT  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_09cf2.dir/CurlTests.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:106:23: error: storage size of ‘hdata’ isn’t known
+  106 |   struct hostent_data hdata;
+      |                       ^~~~~
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:127:8: error: too few arguments to function ‘gethostbyaddr_r’
+  127 |   rc = gethostbyaddr_r(address, length, type, &h, &hdata);
+      |        ^~~~~~~~~~~~~~~
+In file included from /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:93:
+/usr/include/netdb.h:170:12: note: declared here
+  170 | extern int gethostbyaddr_r (const void *__restrict __addr, __socklen_t __len,
+      |            ^~~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_09cf2.dir/build.make:85: CMakeFiles/cmTC_09cf2.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_09cf2/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYADDR_R_7_REENTRANT failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_63be3/fast && gmake  -f CMakeFiles/cmTC_63be3.dir/build.make CMakeFiles/cmTC_63be3.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_63be3.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_GETHOSTBYADDR_R_7_REENTRANT  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_63be3.dir/CurlTests.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:131:8: error: too few arguments to function ‘gethostbyaddr_r’
+  131 |   hp = gethostbyaddr_r(address, length, type, &h, buffer, 8192, &h_errnop);
+      |        ^~~~~~~~~~~~~~~
+In file included from /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:93:
+/usr/include/netdb.h:170:12: note: declared here
+  170 | extern int gethostbyaddr_r (const void *__restrict __addr, __socklen_t __len,
+      |            ^~~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_63be3.dir/build.make:85: CMakeFiles/cmTC_63be3.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_63be3/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_3 failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_dee94/fast && gmake  -f CMakeFiles/cmTC_dee94.dir/build.make CMakeFiles/cmTC_dee94.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dee94.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_GETHOSTBYNAME_R_3  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_dee94.dir/CurlTests.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:106:23: error: storage size of ‘hdata’ isn’t known
+  106 |   struct hostent_data hdata;
+      |                       ^~~~~
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:141:8: error: too few arguments to function ‘gethostbyname_r’
+  141 |   rc = gethostbyname_r(address, &h, &hdata);
+      |        ^~~~~~~~~~~~~~~
+In file included from /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:93:
+/usr/include/netdb.h:177:12: note: declared here
+  177 | extern int gethostbyname_r (const char *__restrict __name,
+      |            ^~~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_dee94.dir/build.make:85: CMakeFiles/cmTC_dee94.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_dee94/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_5 failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_b46bc/fast && gmake  -f CMakeFiles/cmTC_b46bc.dir/build.make CMakeFiles/cmTC_b46bc.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b46bc.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_GETHOSTBYNAME_R_5  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_b46bc.dir/CurlTests.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:144:8: error: too few arguments to function ‘gethostbyname_r’
+  144 |   rc = gethostbyname_r(address, &h, buffer, 8192, &h_errnop);
+      |        ^~~~~~~~~~~~~~~
+In file included from /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:93:
+/usr/include/netdb.h:177:12: note: declared here
+  177 | extern int gethostbyname_r (const char *__restrict __name,
+      |            ^~~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_b46bc.dir/build.make:85: CMakeFiles/cmTC_b46bc.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_b46bc/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_3_REENTRANT failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_3eb82/fast && gmake  -f CMakeFiles/cmTC_3eb82.dir/build.make CMakeFiles/cmTC_3eb82.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3eb82.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_GETHOSTBYNAME_R_3_REENTRANT  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_3eb82.dir/CurlTests.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:106:23: error: storage size of ‘hdata’ isn’t known
+  106 |   struct hostent_data hdata;
+      |                       ^~~~~
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:141:8: error: too few arguments to function ‘gethostbyname_r’
+  141 |   rc = gethostbyname_r(address, &h, &hdata);
+      |        ^~~~~~~~~~~~~~~
+In file included from /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:93:
+/usr/include/netdb.h:177:12: note: declared here
+  177 | extern int gethostbyname_r (const char *__restrict __name,
+      |            ^~~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_3eb82.dir/build.make:85: CMakeFiles/cmTC_3eb82.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_3eb82/fast] Error 2
+
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_5_REENTRANT failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_41bea/fast && gmake  -f CMakeFiles/cmTC_41bea.dir/build.make CMakeFiles/cmTC_41bea.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_41bea.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_GETHOSTBYNAME_R_5_REENTRANT  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_41bea.dir/CurlTests.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:144:8: error: too few arguments to function ‘gethostbyname_r’
+  144 |   rc = gethostbyname_r(address, &h, buffer, 8192, &h_errnop);
+      |        ^~~~~~~~~~~~~~~
+In file included from /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:93:
+/usr/include/netdb.h:177:12: note: declared here
+  177 | extern int gethostbyname_r (const char *__restrict __name,
+      |            ^~~~~~~~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_41bea.dir/build.make:85: CMakeFiles/cmTC_41bea.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_41bea/fast] Error 2
+
+
+Performing Curl Test HAVE_INET_NTOA_R_DECL failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_fa78e/fast && gmake  -f CMakeFiles/cmTC_fa78e.dir/build.make CMakeFiles/cmTC_fa78e.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fa78e.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_INET_NTOA_R_DECL  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_fa78e.dir/CurlTests.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:244:21: error: ‘inet_ntoa_r’ undeclared (first use in this function); did you mean ‘inet_ntoa’?
+  244 |   func = (func_type)inet_ntoa_r;
+      |                     ^~~~~~~~~~~
+      |                     inet_ntoa
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:244:21: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_fa78e.dir/build.make:85: CMakeFiles/cmTC_fa78e.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_fa78e/fast] Error 2
+
+
+Performing Curl Test HAVE_INET_NTOA_R_DECL_REENTRANT failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_f0263/fast && gmake  -f CMakeFiles/cmTC_f0263.dir/build.make CMakeFiles/cmTC_f0263.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f0263.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_INET_NTOA_R_DECL_REENTRANT  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_f0263.dir/CurlTests.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:260:22: error: ‘inet_ntoa_r’ undeclared (first use in this function); did you mean ‘inet_ntoa’?
+  260 |   func = (func_type)&inet_ntoa_r;
+      |                      ^~~~~~~~~~~
+      |                      inet_ntoa
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:260:22: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_f0263.dir/build.make:85: CMakeFiles/cmTC_f0263.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_f0263/fast] Error 2
+
+
+Performing Curl Test HAVE_GLIBC_STRERROR_R failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_5445c/fast && gmake  -f CMakeFiles/cmTC_5445c.dir/build.make CMakeFiles/cmTC_5445c.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5445c.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_GLIBC_STRERROR_R  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_5445c.dir/CurlTests.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:521:51: error: subscripted value is neither array nor pointer nor vector
+  521 |   check(strerror_r(EACCES, buffer, sizeof(buffer))[0]);
+      |                                                   ^
+gmake[1]: *** [CMakeFiles/cmTC_5445c.dir/build.make:85: CMakeFiles/cmTC_5445c.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_5445c/fast] Error 2
+
+
+Performing Curl Test HAVE_BUILTIN_AVAILABLE failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_b70b7/fast && gmake  -f CMakeFiles/cmTC_b70b7.dir/build.make CMakeFiles/cmTC_b70b7.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b70b7.dir/CurlTests.c.o
+/usr/bin/gcc   -w -DHAVE_BUILTIN_AVAILABLE  -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -std=gnu11 -o CMakeFiles/cmTC_b70b7.dir/CurlTests.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:568:26: error: ‘macOS’ undeclared (first use in this function)
+  568 |   if(__builtin_available(macOS 10.12, *)) {}
+      |                          ^~~~~
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:568:26: note: each undeclared identifier is reported only once for each function it appears in
+/mnt/c/users/efede/pico/cmake-3.19.4/Utilities/cmcurl/CMake/CurlTests.c:568:31: error: expected ‘)’ before numeric constant
+  568 |   if(__builtin_available(macOS 10.12, *)) {}
+      |                         ~     ^~~~~~
+      |                               )
+gmake[1]: *** [CMakeFiles/cmTC_b70b7.dir/build.make:85: CMakeFiles/cmTC_b70b7.dir/CurlTests.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_b70b7/fast] Error 2
+
+
+Determining if the arc4random_buf exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_0cf2c/fast && gmake  -f CMakeFiles/cmTC_0cf2c.dir/build.make CMakeFiles/cmTC_0cf2c.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0cf2c.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_0cf2c.dir/CheckSymbolExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘arc4random_buf’ undeclared (first use in this function)
+    8 |   return ((int*)(&arc4random_buf))[argc];
+      |                   ^~~~~~~~~~~~~~
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_0cf2c.dir/build.make:85: CMakeFiles/cmTC_0cf2c.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_0cf2c/fast] Error 2
+
+
+File /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef arc4random_buf
+  return ((int*)(&arc4random_buf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the arc4random exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_72d6d/fast && gmake  -f CMakeFiles/cmTC_72d6d.dir/build.make CMakeFiles/cmTC_72d6d.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_72d6d.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_72d6d.dir/CheckSymbolExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘arc4random’ undeclared (first use in this function); did you mean ‘srandom’?
+    8 |   return ((int*)(&arc4random))[argc];
+      |                   ^~~~~~~~~~
+      |                   srandom
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_72d6d.dir/build.make:85: CMakeFiles/cmTC_72d6d.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_72d6d/fast] Error 2
+
+
+File /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef arc4random
+  return ((int*)(&arc4random))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the include file sys/sysctl.h exists failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_5a85d/fast && gmake  -f CMakeFiles/cmTC_5a85d.dir/build.make CMakeFiles/cmTC_5a85d.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5a85d.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -std=gnu11 -o CMakeFiles/cmTC_5a85d.dir/CheckIncludeFile.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: sys/sysctl.h: No such file or directory
+    1 | #include <sys/sysctl.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_5a85d.dir/build.make:85: CMakeFiles/cmTC_5a85d.dir/CheckIncludeFile.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_5a85d/fast] Error 2
+
+
+
+Determining if files sys/types.h;ctype.h;copyfile.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_db55e/fast && gmake  -f CMakeFiles/cmTC_db55e.dir/build.make CMakeFiles/cmTC_db55e.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_db55e.dir/HAVE_COPYFILE_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_db55e.dir/HAVE_COPYFILE_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_COPYFILE_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_COPYFILE_H.c:4:10: fatal error: copyfile.h: No such file or directory
+    4 | #include <copyfile.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_db55e.dir/build.make:85: CMakeFiles/cmTC_db55e.dir/HAVE_COPYFILE_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_db55e/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <copyfile.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;direct.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_51f1d/fast && gmake  -f CMakeFiles/cmTC_51f1d.dir/build.make CMakeFiles/cmTC_51f1d.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_51f1d.dir/HAVE_DIRECT_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_51f1d.dir/HAVE_DIRECT_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_DIRECT_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_DIRECT_H.c:4:10: fatal error: direct.h: No such file or directory
+    4 | #include <direct.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_51f1d.dir/build.make:85: CMakeFiles/cmTC_51f1d.dir/HAVE_DIRECT_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_51f1d/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <direct.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;dlfcn.h;errno.h;ext2fs/ext2_fs.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_37453/fast && gmake  -f CMakeFiles/cmTC_37453.dir/build.make CMakeFiles/cmTC_37453.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_37453.dir/HAVE_EXT2FS_EXT2_FS_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_37453.dir/HAVE_EXT2FS_EXT2_FS_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_EXT2FS_EXT2_FS_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_EXT2FS_EXT2_FS_H.c:6:10: fatal error: ext2fs/ext2_fs.h: No such file or directory
+    6 | #include <ext2fs/ext2_fs.h>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_37453.dir/build.make:85: CMakeFiles/cmTC_37453.dir/HAVE_EXT2FS_EXT2_FS_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_37453/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <ext2fs/ext2_fs.h>
+
+
+int main(void){return 0;}
+
+Performing C SOURCE FILE Test HAVE_WORKING_EXT2_IOC_GETFLAGS failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_23c05/fast && gmake  -f CMakeFiles/cmTC_23c05.dir/build.make CMakeFiles/cmTC_23c05.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_23c05.dir/src.c.o
+/usr/bin/gcc -DHAVE_WORKING_EXT2_IOC_GETFLAGS  -w  -std=gnu11 -o CMakeFiles/cmTC_23c05.dir/src.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c:2:10: fatal error: ext2fs/ext2_fs.h: No such file or directory
+    2 | #include <ext2fs/ext2_fs.h>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_23c05.dir/build.make:85: CMakeFiles/cmTC_23c05.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_23c05/fast] Error 2
+
+
+Source file was:
+#include <sys/ioctl.h>
+#include <ext2fs/ext2_fs.h>
+int main(void) { return EXT2_IOC_GETFLAGS; }
+Determining if files sys/types.h;ctype.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/types.h;linux/fiemap.h;linux/fs.h;linux/magic.h;locale.h;membership.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_220d0/fast && gmake  -f CMakeFiles/cmTC_220d0.dir/build.make CMakeFiles/cmTC_220d0.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_220d0.dir/HAVE_MEMBERSHIP_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_220d0.dir/HAVE_MEMBERSHIP_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_MEMBERSHIP_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_MEMBERSHIP_H.c:15:10: fatal error: membership.h: No such file or directory
+   15 | #include <membership.h>
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_220d0.dir/build.make:85: CMakeFiles/cmTC_220d0.dir/HAVE_MEMBERSHIP_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_220d0/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/types.h>
+#include <linux/fiemap.h>
+#include <linux/fs.h>
+#include <linux/magic.h>
+#include <locale.h>
+#include <membership.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/types.h;linux/fiemap.h;linux/fs.h;linux/magic.h;locale.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;readpassphrase.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_141e0/fast && gmake  -f CMakeFiles/cmTC_141e0.dir/build.make CMakeFiles/cmTC_141e0.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_141e0.dir/HAVE_READPASSPHRASE_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_141e0.dir/HAVE_READPASSPHRASE_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_READPASSPHRASE_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_READPASSPHRASE_H.c:20:10: fatal error: readpassphrase.h: No such file or directory
+   20 | #include <readpassphrase.h>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_141e0.dir/build.make:85: CMakeFiles/cmTC_141e0.dir/HAVE_READPASSPHRASE_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_141e0/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/types.h>
+#include <linux/fiemap.h>
+#include <linux/fs.h>
+#include <linux/magic.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <readpassphrase.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/types.h;linux/fiemap.h;linux/fs.h;linux/magic.h;locale.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/acl.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_c698d/fast && gmake  -f CMakeFiles/cmTC_c698d.dir/build.make CMakeFiles/cmTC_c698d.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c698d.dir/HAVE_SYS_ACL_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_c698d.dir/HAVE_SYS_ACL_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_SYS_ACL_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_SYS_ACL_H.c:27:10: fatal error: sys/acl.h: No such file or directory
+   27 | #include <sys/acl.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_c698d.dir/build.make:85: CMakeFiles/cmTC_c698d.dir/HAVE_SYS_ACL_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_c698d/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/types.h>
+#include <linux/fiemap.h>
+#include <linux/fs.h>
+#include <linux/magic.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/acl.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/types.h;linux/fiemap.h;linux/fs.h;linux/magic.h;locale.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/extattr.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_1187f/fast && gmake  -f CMakeFiles/cmTC_1187f.dir/build.make CMakeFiles/cmTC_1187f.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1187f.dir/HAVE_SYS_EXTATTR_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_1187f.dir/HAVE_SYS_EXTATTR_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_SYS_EXTATTR_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_SYS_EXTATTR_H.c:28:10: fatal error: sys/extattr.h: No such file or directory
+   28 | #include <sys/extattr.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_1187f.dir/build.make:85: CMakeFiles/cmTC_1187f.dir/HAVE_SYS_EXTATTR_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_1187f/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/types.h>
+#include <linux/fiemap.h>
+#include <linux/fs.h>
+#include <linux/magic.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/cdefs.h>
+#include <sys/extattr.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/types.h;linux/fiemap.h;linux/fs.h;linux/magic.h;locale.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/ioctl.h;sys/mkdev.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_a4746/fast && gmake  -f CMakeFiles/cmTC_a4746.dir/build.make CMakeFiles/cmTC_a4746.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a4746.dir/HAVE_SYS_MKDEV_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_a4746.dir/HAVE_SYS_MKDEV_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_SYS_MKDEV_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_SYS_MKDEV_H.c:29:10: fatal error: sys/mkdev.h: No such file or directory
+   29 | #include <sys/mkdev.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_a4746.dir/build.make:85: CMakeFiles/cmTC_a4746.dir/HAVE_SYS_MKDEV_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_a4746/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/types.h>
+#include <linux/fiemap.h>
+#include <linux/fs.h>
+#include <linux/magic.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/mkdev.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/types.h;linux/fiemap.h;linux/fs.h;linux/magic.h;locale.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/ioctl.h;sys/mount.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_3f2a4/fast && gmake  -f CMakeFiles/cmTC_3f2a4.dir/build.make CMakeFiles/cmTC_3f2a4.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3f2a4.dir/HAVE_SYS_MOUNT_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_3f2a4.dir/HAVE_SYS_MOUNT_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_SYS_MOUNT_H.c
+In file included from /usr/include/linux/fs.h:19,
+                 from /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_SYS_MOUNT_H.c:12:
+/usr/include/x86_64-linux-gnu/sys/mount.h:35:3: error: expected identifier before numeric constant
+   35 |   MS_RDONLY = 1,                /* Mount read-only.  */
+      |   ^~~~~~~~~
+gmake[1]: *** [CMakeFiles/cmTC_3f2a4.dir/build.make:85: CMakeFiles/cmTC_3f2a4.dir/HAVE_SYS_MOUNT_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_3f2a4/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/types.h>
+#include <linux/fiemap.h>
+#include <linux/fs.h>
+#include <linux/magic.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/mount.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/types.h;linux/fiemap.h;linux/fs.h;linux/magic.h;locale.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/richacl.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_b91d3/fast && gmake  -f CMakeFiles/cmTC_b91d3.dir/build.make CMakeFiles/cmTC_b91d3.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b91d3.dir/HAVE_SYS_RICHACL_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_b91d3.dir/HAVE_SYS_RICHACL_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_SYS_RICHACL_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_SYS_RICHACL_H.c:31:10: fatal error: sys/richacl.h: No such file or directory
+   31 | #include <sys/richacl.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_b91d3.dir/build.make:85: CMakeFiles/cmTC_b91d3.dir/HAVE_SYS_RICHACL_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_b91d3/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/types.h>
+#include <linux/fiemap.h>
+#include <linux/fs.h>
+#include <linux/magic.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/richacl.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/types.h;linux/fiemap.h;linux/fs.h;linux/magic.h;locale.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/select.h;sys/stat.h;sys/statfs.h;sys/statvfs.h;sys/sysmacros.h;sys/time.h;sys/utsname.h;sys/vfs.h;sys/wait.h;sys/xattr.h;time.h;unistd.h;utime.h;wchar.h;wctype.h;windows.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_d7b95/fast && gmake  -f CMakeFiles/cmTC_d7b95.dir/build.make CMakeFiles/cmTC_d7b95.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d7b95.dir/HAVE_WINDOWS_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_d7b95.dir/HAVE_WINDOWS_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_WINDOWS_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_WINDOWS_H.c:46:10: fatal error: windows.h: No such file or directory
+   46 | #include <windows.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_d7b95.dir/build.make:85: CMakeFiles/cmTC_d7b95.dir/HAVE_WINDOWS_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_d7b95/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/types.h>
+#include <linux/fiemap.h>
+#include <linux/fs.h>
+#include <linux/magic.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/select.h>
+#include <sys/stat.h>
+#include <sys/statfs.h>
+#include <sys/statvfs.h>
+#include <sys/sysmacros.h>
+#include <sys/time.h>
+#include <sys/utsname.h>
+#include <sys/vfs.h>
+#include <sys/wait.h>
+#include <sys/xattr.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <wchar.h>
+#include <wctype.h>
+#include <windows.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/types.h;linux/fiemap.h;linux/fs.h;linux/magic.h;locale.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/select.h;sys/stat.h;sys/statfs.h;sys/statvfs.h;sys/sysmacros.h;sys/time.h;sys/utsname.h;sys/vfs.h;sys/wait.h;sys/xattr.h;time.h;unistd.h;utime.h;wchar.h;wctype.h;wincrypt.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_98810/fast && gmake  -f CMakeFiles/cmTC_98810.dir/build.make CMakeFiles/cmTC_98810.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_98810.dir/HAVE_WINCRYPT_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_98810.dir/HAVE_WINCRYPT_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_WINCRYPT_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_WINCRYPT_H.c:46:10: fatal error: wincrypt.h: No such file or directory
+   46 | #include <wincrypt.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_98810.dir/build.make:85: CMakeFiles/cmTC_98810.dir/HAVE_WINCRYPT_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_98810/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/types.h>
+#include <linux/fiemap.h>
+#include <linux/fs.h>
+#include <linux/magic.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/select.h>
+#include <sys/stat.h>
+#include <sys/statfs.h>
+#include <sys/statvfs.h>
+#include <sys/sysmacros.h>
+#include <sys/time.h>
+#include <sys/utsname.h>
+#include <sys/vfs.h>
+#include <sys/wait.h>
+#include <sys/xattr.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <wchar.h>
+#include <wctype.h>
+#include <wincrypt.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/types.h;ctype.h;dlfcn.h;errno.h;fcntl.h;grp.h;langinfo.h;limits.h;linux/types.h;linux/fiemap.h;linux/fs.h;linux/magic.h;locale.h;memory.h;paths.h;poll.h;pthread.h;pwd.h;regex.h;signal.h;spawn.h;stdarg.h;stdlib.h;string.h;strings.h;sys/cdefs.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/select.h;sys/stat.h;sys/statfs.h;sys/statvfs.h;sys/sysmacros.h;sys/time.h;sys/utsname.h;sys/vfs.h;sys/wait.h;sys/xattr.h;time.h;unistd.h;utime.h;wchar.h;wctype.h;winioctl.h exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_a5aac/fast && gmake  -f CMakeFiles/cmTC_a5aac.dir/build.make CMakeFiles/cmTC_a5aac.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a5aac.dir/HAVE_WINIOCTL_H.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_a5aac.dir/HAVE_WINIOCTL_H.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_WINIOCTL_H.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CheckIncludeFiles/HAVE_WINIOCTL_H.c:46:10: fatal error: winioctl.h: No such file or directory
+   46 | #include <winioctl.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_a5aac.dir/build.make:85: CMakeFiles/cmTC_a5aac.dir/HAVE_WINIOCTL_H.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_a5aac/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/types.h>
+#include <ctype.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <grp.h>
+#include <langinfo.h>
+#include <limits.h>
+#include <linux/types.h>
+#include <linux/fiemap.h>
+#include <linux/fs.h>
+#include <linux/magic.h>
+#include <locale.h>
+#include <memory.h>
+#include <paths.h>
+#include <poll.h>
+#include <pthread.h>
+#include <pwd.h>
+#include <regex.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/cdefs.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/select.h>
+#include <sys/stat.h>
+#include <sys/statfs.h>
+#include <sys/statvfs.h>
+#include <sys/sysmacros.h>
+#include <sys/time.h>
+#include <sys/utsname.h>
+#include <sys/vfs.h>
+#include <sys/wait.h>
+#include <sys/xattr.h>
+#include <time.h>
+#include <unistd.h>
+#include <utime.h>
+#include <wchar.h>
+#include <wctype.h>
+#include <winioctl.h>
+
+
+int main(void){return 0;}
+
+Determining if the function getvfsbyname exists failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_2272e/fast && gmake  -f CMakeFiles/cmTC_2272e.dir/build.make CMakeFiles/cmTC_2272e.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2272e.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=getvfsbyname  -fno-builtin -std=gnu11 -o CMakeFiles/cmTC_2272e.dir/CheckFunctionExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2272e
+/mnt/c/users/efede/pico/cmake-3.19.4/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_2272e.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=getvfsbyname  -fno-builtin CMakeFiles/cmTC_2272e.dir/CheckFunctionExists.c.o -o cmTC_2272e 
+/usr/bin/ld: CMakeFiles/cmTC_2272e.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `getvfsbyname'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_2272e.dir/build.make:106: cmTC_2272e] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_2272e/fast] Error 2
+
+
+
+Determining if the function lchflags exists failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_9989e/fast && gmake  -f CMakeFiles/cmTC_9989e.dir/build.make CMakeFiles/cmTC_9989e.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9989e.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=lchflags  -fno-builtin -std=gnu11 -o CMakeFiles/cmTC_9989e.dir/CheckFunctionExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9989e
+/mnt/c/users/efede/pico/cmake-3.19.4/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_9989e.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=lchflags  -fno-builtin CMakeFiles/cmTC_9989e.dir/CheckFunctionExists.c.o -o cmTC_9989e 
+/usr/bin/ld: CMakeFiles/cmTC_9989e.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `lchflags'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_9989e.dir/build.make:106: cmTC_9989e] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_9989e/fast] Error 2
+
+
+
+Determining if the function readpassphrase exists failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_d91e4/fast && gmake  -f CMakeFiles/cmTC_d91e4.dir/build.make CMakeFiles/cmTC_d91e4.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d91e4.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=readpassphrase  -fno-builtin -std=gnu11 -o CMakeFiles/cmTC_d91e4.dir/CheckFunctionExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d91e4
+/mnt/c/users/efede/pico/cmake-3.19.4/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_d91e4.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=readpassphrase  -fno-builtin CMakeFiles/cmTC_d91e4.dir/CheckFunctionExists.c.o -o cmTC_d91e4 
+/usr/bin/ld: CMakeFiles/cmTC_d91e4.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `readpassphrase'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_d91e4.dir/build.make:106: cmTC_d91e4] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_d91e4/fast] Error 2
+
+
+
+Determining if the function strncpy_s exists failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_44185/fast && gmake  -f CMakeFiles/cmTC_44185.dir/build.make CMakeFiles/cmTC_44185.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_44185.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=strncpy_s  -fno-builtin -std=gnu11 -o CMakeFiles/cmTC_44185.dir/CheckFunctionExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Modules/CheckFunctionExists.c
+Linking C executable cmTC_44185
+/mnt/c/users/efede/pico/cmake-3.19.4/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_44185.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=strncpy_s  -fno-builtin CMakeFiles/cmTC_44185.dir/CheckFunctionExists.c.o -o cmTC_44185 
+/usr/bin/ld: CMakeFiles/cmTC_44185.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `strncpy_s'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_44185.dir/build.make:106: cmTC_44185] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_44185/fast] Error 2
+
+
+
+Determining if the function _ctime64_s exists failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_cdcbf/fast && gmake  -f CMakeFiles/cmTC_cdcbf.dir/build.make CMakeFiles/cmTC_cdcbf.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cdcbf.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=_ctime64_s  -fno-builtin -std=gnu11 -o CMakeFiles/cmTC_cdcbf.dir/CheckFunctionExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Modules/CheckFunctionExists.c
+Linking C executable cmTC_cdcbf
+/mnt/c/users/efede/pico/cmake-3.19.4/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_cdcbf.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=_ctime64_s  -fno-builtin CMakeFiles/cmTC_cdcbf.dir/CheckFunctionExists.c.o -o cmTC_cdcbf 
+/usr/bin/ld: CMakeFiles/cmTC_cdcbf.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_ctime64_s'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_cdcbf.dir/build.make:106: cmTC_cdcbf] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_cdcbf/fast] Error 2
+
+
+
+Determining if the function _fseeki64 exists failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_87f5d/fast && gmake  -f CMakeFiles/cmTC_87f5d.dir/build.make CMakeFiles/cmTC_87f5d.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_87f5d.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=_fseeki64  -fno-builtin -std=gnu11 -o CMakeFiles/cmTC_87f5d.dir/CheckFunctionExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Modules/CheckFunctionExists.c
+Linking C executable cmTC_87f5d
+/mnt/c/users/efede/pico/cmake-3.19.4/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_87f5d.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=_fseeki64  -fno-builtin CMakeFiles/cmTC_87f5d.dir/CheckFunctionExists.c.o -o cmTC_87f5d 
+/usr/bin/ld: CMakeFiles/cmTC_87f5d.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_fseeki64'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_87f5d.dir/build.make:106: cmTC_87f5d] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_87f5d/fast] Error 2
+
+
+
+Determining if the function _get_timezone exists failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_834b1/fast && gmake  -f CMakeFiles/cmTC_834b1.dir/build.make CMakeFiles/cmTC_834b1.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_834b1.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=_get_timezone  -fno-builtin -std=gnu11 -o CMakeFiles/cmTC_834b1.dir/CheckFunctionExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Modules/CheckFunctionExists.c
+Linking C executable cmTC_834b1
+/mnt/c/users/efede/pico/cmake-3.19.4/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_834b1.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=_get_timezone  -fno-builtin CMakeFiles/cmTC_834b1.dir/CheckFunctionExists.c.o -o cmTC_834b1 
+/usr/bin/ld: CMakeFiles/cmTC_834b1.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_get_timezone'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_834b1.dir/build.make:106: cmTC_834b1] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_834b1/fast] Error 2
+
+
+
+Determining if the function _gmtime64_s exists failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_a4252/fast && gmake  -f CMakeFiles/cmTC_a4252.dir/build.make CMakeFiles/cmTC_a4252.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a4252.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=_gmtime64_s  -fno-builtin -std=gnu11 -o CMakeFiles/cmTC_a4252.dir/CheckFunctionExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a4252
+/mnt/c/users/efede/pico/cmake-3.19.4/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_a4252.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=_gmtime64_s  -fno-builtin CMakeFiles/cmTC_a4252.dir/CheckFunctionExists.c.o -o cmTC_a4252 
+/usr/bin/ld: CMakeFiles/cmTC_a4252.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_gmtime64_s'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_a4252.dir/build.make:106: cmTC_a4252] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_a4252/fast] Error 2
+
+
+
+Determining if the function _localtime64_s exists failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_f9104/fast && gmake  -f CMakeFiles/cmTC_f9104.dir/build.make CMakeFiles/cmTC_f9104.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f9104.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=_localtime64_s  -fno-builtin -std=gnu11 -o CMakeFiles/cmTC_f9104.dir/CheckFunctionExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f9104
+/mnt/c/users/efede/pico/cmake-3.19.4/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_f9104.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=_localtime64_s  -fno-builtin CMakeFiles/cmTC_f9104.dir/CheckFunctionExists.c.o -o cmTC_f9104 
+/usr/bin/ld: CMakeFiles/cmTC_f9104.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_localtime64_s'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_f9104.dir/build.make:106: cmTC_f9104] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_f9104/fast] Error 2
+
+
+
+Determining if the function _mkgmtime64 exists failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_b189f/fast && gmake  -f CMakeFiles/cmTC_b189f.dir/build.make CMakeFiles/cmTC_b189f.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b189f.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=_mkgmtime64  -fno-builtin -std=gnu11 -o CMakeFiles/cmTC_b189f.dir/CheckFunctionExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b189f
+/mnt/c/users/efede/pico/cmake-3.19.4/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_b189f.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=_mkgmtime64  -fno-builtin CMakeFiles/cmTC_b189f.dir/CheckFunctionExists.c.o -o cmTC_b189f 
+/usr/bin/ld: CMakeFiles/cmTC_b189f.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_mkgmtime64'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_b189f.dir/build.make:106: cmTC_b189f] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_b189f/fast] Error 2
+
+
+
+Determining if the function cygwin_conv_path exists failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_c8c94/fast && gmake  -f CMakeFiles/cmTC_c8c94.dir/build.make CMakeFiles/cmTC_c8c94.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c8c94.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -w -DCHECK_FUNCTION_EXISTS=cygwin_conv_path  -fno-builtin -std=gnu11 -o CMakeFiles/cmTC_c8c94.dir/CheckFunctionExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c8c94
+/mnt/c/users/efede/pico/cmake-3.19.4/Bootstrap.cmk/cmake -E cmake_link_script CMakeFiles/cmTC_c8c94.dir/link.txt --verbose=1
+/usr/bin/gcc  -w -DCHECK_FUNCTION_EXISTS=cygwin_conv_path  -fno-builtin CMakeFiles/cmTC_c8c94.dir/CheckFunctionExists.c.o -o cmTC_c8c94 
+/usr/bin/ld: CMakeFiles/cmTC_c8c94.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `cygwin_conv_path'
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [CMakeFiles/cmTC_c8c94.dir/build.make:106: cmTC_c8c94] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_c8c94/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test HAVE_STRUCT_VFSCONF failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_0759d/fast && gmake  -f CMakeFiles/cmTC_0759d.dir/build.make CMakeFiles/cmTC_0759d.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0759d.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_VFSCONF  -w  -std=gnu11 -o CMakeFiles/cmTC_0759d.dir/src.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c:3:33: error: storage size of ‘v’ isn’t known
+    3 | int main(void) { struct vfsconf v; return sizeof(v);}
+      |                                 ^
+gmake[1]: *** [CMakeFiles/cmTC_0759d.dir/build.make:85: CMakeFiles/cmTC_0759d.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_0759d/fast] Error 2
+
+
+Source file was:
+#include <sys/types.h>
+#include <sys/mount.h>
+int main(void) { struct vfsconf v; return sizeof(v);}
+Performing C SOURCE FILE Test HAVE_STRUCT_XVFSCONF failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_34305/fast && gmake  -f CMakeFiles/cmTC_34305.dir/build.make CMakeFiles/cmTC_34305.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_34305.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_XVFSCONF  -w  -std=gnu11 -o CMakeFiles/cmTC_34305.dir/src.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c:3:34: error: storage size of ‘v’ isn’t known
+    3 | int main(void) { struct xvfsconf v; return sizeof(v);}
+      |                                  ^
+gmake[1]: *** [CMakeFiles/cmTC_34305.dir/build.make:85: CMakeFiles/cmTC_34305.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_34305/fast] Error 2
+
+
+Source file was:
+#include <sys/types.h>
+#include <sys/mount.h>
+int main(void) { struct xvfsconf v; return sizeof(v);}
+Performing C SOURCE FILE Test MAJOR_IN_MKDEV failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_3cac5/fast && gmake  -f CMakeFiles/cmTC_3cac5.dir/build.make CMakeFiles/cmTC_3cac5.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3cac5.dir/src.c.o
+/usr/bin/gcc -DMAJOR_IN_MKDEV  -w  -std=gnu11 -o CMakeFiles/cmTC_3cac5.dir/src.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c:1:10: fatal error: sys/mkdev.h: No such file or directory
+    1 | #include <sys/mkdev.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_3cac5.dir/build.make:85: CMakeFiles/cmTC_3cac5.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_3cac5/fast] Error 2
+
+
+Source file was:
+#include <sys/mkdev.h>
+int main() { return major(256); }
+Performing C SOURCE FILE Test HAVE_LZMA_STREAM_ENCODER_MT failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_06410/fast && gmake  -f CMakeFiles/cmTC_06410.dir/build.make CMakeFiles/cmTC_06410.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_06410.dir/src.c.o
+/usr/bin/gcc -DHAVE_LZMA_STREAM_ENCODER_MT  -w  -std=gnu11 -o CMakeFiles/cmTC_06410.dir/src.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c:1:10: fatal error: lzma.h: No such file or directory
+    1 | #include <lzma.h>
+      |          ^~~~~~~~
+compilation terminated.
+gmake[1]: *** [CMakeFiles/cmTC_06410.dir/build.make:85: CMakeFiles/cmTC_06410.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_06410/fast] Error 2
+
+
+Source file was:
+#include <lzma.h>
+#if LZMA_VERSION < 50020000
+#error unsupported
+#endif
+int main(void){lzma_stream_encoder_mt(0, 0); return 0;}
+Determining if the EFTYPE exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_a063f/fast && gmake  -f CMakeFiles/cmTC_a063f.dir/build.make CMakeFiles/cmTC_a063f.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a063f.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_a063f.dir/CheckSymbolExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘EFTYPE’ undeclared (first use in this function)
+    8 |   return ((int*)(&EFTYPE))[argc];
+      |                   ^~~~~~
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_a063f.dir/build.make:85: CMakeFiles/cmTC_a063f.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_a063f/fast] Error 2
+
+
+File /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <errno.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef EFTYPE
+  return ((int*)(&EFTYPE))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the D_MD_ORDER exist failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_9d160/fast && gmake  -f CMakeFiles/cmTC_9d160.dir/build.make CMakeFiles/cmTC_9d160.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9d160.dir/CheckSymbolExists.c.o
+/usr/bin/gcc   -w  -std=gnu11 -o CMakeFiles/cmTC_9d160.dir/CheckSymbolExists.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘D_MD_ORDER’ undeclared (first use in this function)
+    8 |   return ((int*)(&D_MD_ORDER))[argc];
+      |                   ^~~~~~~~~~
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+gmake[1]: *** [CMakeFiles/cmTC_9d160.dir/build.make:85: CMakeFiles/cmTC_9d160.dir/CheckSymbolExists.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_9d160/fast] Error 2
+
+
+File /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <langinfo.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef D_MD_ORDER
+  return ((int*)(&D_MD_ORDER))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C SOURCE FILE Test HAVE_STRUCT_TM___TM_GMTOFF failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_a8b82/fast && gmake  -f CMakeFiles/cmTC_a8b82.dir/build.make CMakeFiles/cmTC_a8b82.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a8b82.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_TM___TM_GMTOFF  -w  -std=gnu11 -o CMakeFiles/cmTC_a8b82.dir/src.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c:6:34: error: ‘struct tm’ has no member named ‘__tm_gmtoff’; did you mean ‘tm_gmtoff’?
+    6 |   (void)sizeof(((struct tm *)0)->__tm_gmtoff);
+      |                                  ^~~~~~~~~~~
+      |                                  tm_gmtoff
+gmake[1]: *** [CMakeFiles/cmTC_a8b82.dir/build.make:85: CMakeFiles/cmTC_a8b82.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_a8b82/fast] Error 2
+
+
+Source file was:
+
+#include <time.h>
+
+int main()
+{
+  (void)sizeof(((struct tm *)0)->__tm_gmtoff);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STATFS_F_NAMEMAX failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_0ca19/fast && gmake  -f CMakeFiles/cmTC_0ca19.dir/build.make CMakeFiles/cmTC_0ca19.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0ca19.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_STATFS_F_NAMEMAX  -w  -std=gnu11 -o CMakeFiles/cmTC_0ca19.dir/src.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c:7:36: error: invalid use of undefined type ‘struct statfs’
+    7 |   (void)sizeof(((struct statfs *)0)->f_namemax);
+      |                                    ^~
+gmake[1]: *** [CMakeFiles/cmTC_0ca19.dir/build.make:85: CMakeFiles/cmTC_0ca19.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_0ca19/fast] Error 2
+
+
+Source file was:
+
+#include <sys/param.h>
+#include <sys/mount.h>
+
+int main()
+{
+  (void)sizeof(((struct statfs *)0)->f_namemax);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_BIRTHTIME failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_1f758/fast && gmake  -f CMakeFiles/cmTC_1f758.dir/build.make CMakeFiles/cmTC_1f758.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1f758.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_STAT_ST_BIRTHTIME  -w  -std=gnu11 -o CMakeFiles/cmTC_1f758.dir/src.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c:7:34: error: ‘struct stat’ has no member named ‘st_birthtime’
+    7 |   (void)sizeof(((struct stat *)0)->st_birthtime);
+      |                                  ^~
+gmake[1]: *** [CMakeFiles/cmTC_1f758.dir/build.make:85: CMakeFiles/cmTC_1f758.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_1f758/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_birthtime);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_BIRTHTIMESPEC_TV_NSEC failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_ed287/fast && gmake  -f CMakeFiles/cmTC_ed287.dir/build.make CMakeFiles/cmTC_ed287.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ed287.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_STAT_ST_BIRTHTIMESPEC_TV_NSEC  -w  -std=gnu11 -o CMakeFiles/cmTC_ed287.dir/src.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c:7:34: error: ‘struct stat’ has no member named ‘st_birthtimespec’
+    7 |   (void)sizeof(((struct stat *)0)->st_birthtimespec.tv_nsec);
+      |                                  ^~
+gmake[1]: *** [CMakeFiles/cmTC_ed287.dir/build.make:85: CMakeFiles/cmTC_ed287.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_ed287/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_birthtimespec.tv_nsec);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_MTIMESPEC_TV_NSEC failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_21ac7/fast && gmake  -f CMakeFiles/cmTC_21ac7.dir/build.make CMakeFiles/cmTC_21ac7.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_21ac7.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_STAT_ST_MTIMESPEC_TV_NSEC  -w  -std=gnu11 -o CMakeFiles/cmTC_21ac7.dir/src.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c:7:34: error: ‘struct stat’ has no member named ‘st_mtimespec’
+    7 |   (void)sizeof(((struct stat *)0)->st_mtimespec.tv_nsec);
+      |                                  ^~
+gmake[1]: *** [CMakeFiles/cmTC_21ac7.dir/build.make:85: CMakeFiles/cmTC_21ac7.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_21ac7/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_mtimespec.tv_nsec);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_MTIME_N failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_d48d8/fast && gmake  -f CMakeFiles/cmTC_d48d8.dir/build.make CMakeFiles/cmTC_d48d8.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d48d8.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_STAT_ST_MTIME_N  -w  -std=gnu11 -o CMakeFiles/cmTC_d48d8.dir/src.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c:7:36: error: ‘struct stat’ has no member named ‘st_mtime_n’; did you mean ‘st_mtim’?
+    7 |   (void)sizeof(((struct stat *)0)->st_mtime_n);
+      |                                    ^~~~~~~~~~
+      |                                    st_mtim
+gmake[1]: *** [CMakeFiles/cmTC_d48d8.dir/build.make:85: CMakeFiles/cmTC_d48d8.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_d48d8/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_mtime_n);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_UMTIME failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_1e212/fast && gmake  -f CMakeFiles/cmTC_1e212.dir/build.make CMakeFiles/cmTC_1e212.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1e212.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_STAT_ST_UMTIME  -w  -std=gnu11 -o CMakeFiles/cmTC_1e212.dir/src.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c:7:36: error: ‘struct stat’ has no member named ‘st_umtime’; did you mean ‘st_mtim’?
+    7 |   (void)sizeof(((struct stat *)0)->st_umtime);
+      |                                    ^~~~~~~~~
+      |                                    st_mtim
+gmake[1]: *** [CMakeFiles/cmTC_1e212.dir/build.make:85: CMakeFiles/cmTC_1e212.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_1e212/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_umtime);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_MTIME_USEC failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_fbc52/fast && gmake  -f CMakeFiles/cmTC_fbc52.dir/build.make CMakeFiles/cmTC_fbc52.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fbc52.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_STAT_ST_MTIME_USEC  -w  -std=gnu11 -o CMakeFiles/cmTC_fbc52.dir/src.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c:7:34: error: ‘struct stat’ has no member named ‘st_mtime_usec’
+    7 |   (void)sizeof(((struct stat *)0)->st_mtime_usec);
+      |                                  ^~
+gmake[1]: *** [CMakeFiles/cmTC_fbc52.dir/build.make:85: CMakeFiles/cmTC_fbc52.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_fbc52/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_mtime_usec);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_FLAGS failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_1ca96/fast && gmake  -f CMakeFiles/cmTC_1ca96.dir/build.make CMakeFiles/cmTC_1ca96.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1ca96.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_STAT_ST_FLAGS  -w  -std=gnu11 -o CMakeFiles/cmTC_1ca96.dir/src.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c:7:34: error: ‘struct stat’ has no member named ‘st_flags’
+    7 |   (void)sizeof(((struct stat *)0)->st_flags);
+      |                                  ^~
+gmake[1]: *** [CMakeFiles/cmTC_1ca96.dir/build.make:85: CMakeFiles/cmTC_1ca96.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_1ca96/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+  (void)sizeof(((struct stat *)0)->st_flags);
+  return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STATVFS_F_IOSIZE failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_ac349/fast && gmake  -f CMakeFiles/cmTC_ac349.dir/build.make CMakeFiles/cmTC_ac349.dir/build
+gmake[1]: Entering directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ac349.dir/src.c.o
+/usr/bin/gcc -DHAVE_STRUCT_STATVFS_F_IOSIZE  -w  -std=gnu11 -o CMakeFiles/cmTC_ac349.dir/src.c.o -c /mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp/src.c:7:39: error: ‘struct statvfs’ has no member named ‘f_iosize’; did you mean ‘f_bsize’?
+    7 |   (void)sizeof(((struct statvfs *)0)->f_iosize);
+      |                                       ^~~~~~~~
+      |                                       f_bsize
+gmake[1]: *** [CMakeFiles/cmTC_ac349.dir/build.make:85: CMakeFiles/cmTC_ac349.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/mnt/c/users/efede/pico/cmake-3.19.4/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_ac349/fast] Error 2
+
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/statvfs.h>
+
+int main()
+{
+  (void)sizeof(((struct statvfs *)0)->f_iosize);
+  return 0;
+}
+
+Checking for curses support failed with the following output:
+Change Dir: /mnt/c/users/efede/pico/cmake-3.19.4/Source/Checks/Curses-build
+
+Run Build Command(s):/usr/bin/gmake CheckCurses && gmake: *** No rule to make target 'CheckCurses'.  Stop.
+
+
+
+Looking for a Fortran compiler failed with the following output:
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- The Fortran compiler identification is unknown
+CMake Error at CMakeLists.txt:2 (project):
+  No CMAKE_Fortran_COMPILER could be found.
+
+  Tell CMake where to find the compiler by setting either the environment
+  variable "FC" or the CMake cache entry CMAKE_Fortran_COMPILER to the full
+  path to the compiler, or to the compiler name if it is in the PATH.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/mnt/c/users/efede/pico/cmake-3.19.4/Tests/CMakeFiles/CheckFortran/CMakeFiles/CMakeOutput.log".
+See also "/mnt/c/users/efede/pico/cmake-3.19.4/Tests/CMakeFiles/CheckFortran/CMakeFiles/CMakeError.log".
+

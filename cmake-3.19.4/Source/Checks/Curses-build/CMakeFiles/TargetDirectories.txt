@@ -1,0 +1,2 @@
+/mnt/c/users/efede/pico/cmake-3.19.4/Source/Checks/Curses-build/CMakeFiles/rebuild_cache.dir
+/mnt/c/users/efede/pico/cmake-3.19.4/Source/Checks/Curses-build/CMakeFiles/edit_cache.dir
